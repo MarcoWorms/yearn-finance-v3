@@ -18,7 +18,7 @@ Code style follows prettier conventions (`yarn prettier`). Commit messages follo
 - Set origin to your fork. This is where you push your changes to
 
   ```
-  $ git remote add origin https://github.com/<your-gh>>/yearn-finance-v3
+  $ git remote add origin https://github.com/<your-gh>/yearn-finance-v3
   ```
 
 - Set upstream to original repo.
@@ -70,7 +70,7 @@ $ yarn dev
 ```
 
 - To enable Dev Mode set `REACT_APP_ALLOW_DEV_MODE=true` in your .env
-- Wallet Address Override can be acivated by navigating to Settings in the app and clicking `Enable Dev Mode`
+- Wallet Address Override can be activated by navigating to Settings in the app and clicking `Enable Dev Mode`
 
 ## Production
 
