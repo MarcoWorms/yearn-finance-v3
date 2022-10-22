@@ -96,6 +96,7 @@ export interface AmountInputProps extends BoxProps {
   error?: boolean;
   disabled?: boolean;
   loading?: boolean;
+  className?: string;
 }
 
 export const AmountInput = ({

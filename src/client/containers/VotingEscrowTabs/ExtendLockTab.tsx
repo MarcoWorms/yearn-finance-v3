@@ -73,8 +73,8 @@ export const ExtendLockTab = () => {
       </Box>
       <Box>
         <Box mt="0.8rem">
-          <Box display="flex" gap="1.6rem">
-            <AmountInput label="Current time" amount={weeksToUnlock} mt="1.6rem" width={1 / 2} disabled />
+          <Box className="flex flex-col flex-nowrap md:flex-row w-full" gap="1.6rem">
+            <AmountInput label="Current time" amount={weeksToUnlock} mt="1.6rem" className="w-full md:w-1/2" disabled />
             <AmountInput
               label="Increase lock time (weeks)"
               amount={lockTime}
@@ -82,16 +82,16 @@ export const ExtendLockTab = () => {
               maxAmount={toBN(MAX_LOCK_TIME).minus(weeksToUnlock).toString()}
               message="min 1"
               mt="1.6rem"
-              width={1 / 2}
+              className="w-full md:w-1/2"
             />
           </Box>
-          <Box display="flex" alignItems="center" gap="1.6rem">
+          <Box className="flex flex-col flex-nowrap md:flex-row w-full" alignItems="center" gap="1.6rem">
             <AmountInput
               label="Total veYFI"
               amount={resultAmount}
               loading={getExpectedTransactionOutcomeStatus.loading}
               mt="1.6rem"
-              width={1 / 2}
+              className="w-full md:w-1/2"
               disabled
             />
             <Button
@@ -107,7 +107,7 @@ export const ExtendLockTab = () => {
                 extendLockTimeStatus.loading
               }
               filled
-              width={1 / 2}
+              className="w-full md:w-1/2"
               height="5.6rem"
               mt="4.4rem"
             >

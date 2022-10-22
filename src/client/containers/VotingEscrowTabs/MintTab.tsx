@@ -38,7 +38,7 @@ export const MintTab = () => {
       <Box>
         <Box mt="0.8rem">
           <Text heading="h3">Mint</Text>
-          <Box display="flex" alignItems="center" gap="1.6rem">
+          <Box className="flex flex-col flex-nowrap md:flex-row w-full" alignItems="center" gap="1.6rem">
             <AmountInput
               label={`${votingEscrow?.token.symbol ?? 'YFI'}`}
               amount={amount}
@@ -51,14 +51,14 @@ export const MintTab = () => {
                 4
               )} ${votingEscrow?.token.symbol ?? 'YFI'}`}
               mt="1.6rem"
-              width={1 / 2}
+              className="w-full md:w-1/2"
             />
             <Button
               onClick={executeMint}
               isLoading={mintStatus.loading}
               success={mintStatus.executed && !mintStatus.error}
               filled
-              width={1 / 2}
+              className="w-full md:w-1/2"
               height="5.6rem"
               mt="2.4rem"
             >

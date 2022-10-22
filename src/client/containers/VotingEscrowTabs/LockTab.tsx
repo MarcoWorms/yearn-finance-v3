@@ -189,7 +189,7 @@ export const LockTab = () => {
       <Box>
         <Box mt="0.8rem">
           <Text heading="h3">Locking</Text>
-          <Box display="flex" gap="1.6rem">
+          <Box className="flex flex-col flex-nowrap md:flex-row w-full" gap="1.6rem">
             <AmountInput
               label={`${votingEscrow?.token.symbol ?? 'YFI'}`}
               amount={lockAmount}
@@ -202,7 +202,7 @@ export const LockTab = () => {
                 4
               )} ${votingEscrow?.token.symbol ?? 'YFI'}`}
               mt="1.6rem"
-              width={1 / 2}
+              className="w-full md:w-1/2"
             />
             <AmountInput
               label="Lock time (weeks)"
@@ -212,16 +212,16 @@ export const LockTab = () => {
               disabled={hasLockedAmount}
               message="min 1"
               mt="1.6rem"
-              width={1 / 2}
+              className="w-full md:w-1/2"
             />
           </Box>
-          <Box display="flex" alignItems="center" gap="1.6rem">
+          <Box className="flex flex-col flex-nowrap md:flex-row" alignItems="center" gap="1.6rem">
             <AmountInput
               label="Total veYFI"
               amount={resultAmount}
               loading={getExpectedTransactionOutcomeStatus.loading}
               mt="1.6rem"
-              width={1 / 2}
+              className="w-full md:w-1/2"
               disabled
             />
             <Button
@@ -233,7 +233,7 @@ export const LockTab = () => {
                 (increaseLockAmountStatus.executed && !increaseLockAmountStatus.error)
               }
               filled
-              width={1 / 2}
+              className="w-full md:w-1/2"
               height="5.6rem"
               mt="4.4rem"
             >

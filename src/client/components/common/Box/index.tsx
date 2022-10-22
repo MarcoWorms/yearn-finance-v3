@@ -8,6 +8,7 @@ export interface BoxProps extends StyledSystemProps {
   gap?: string;
   onClick?: () => void;
   onBlur?: () => void;
+  className?: string;
 }
 
 const StyledDiv = styled.div<BoxProps>`

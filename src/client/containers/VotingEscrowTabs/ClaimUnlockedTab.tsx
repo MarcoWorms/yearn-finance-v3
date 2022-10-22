@@ -38,12 +38,12 @@ export const ClaimUnlockedTab = () => {
       <Box>
         <Box mt="0.8rem">
           <Text heading="h3">Claiming</Text>
-          <Box display="flex" alignItems="center" gap="1.6rem">
+          <Box className="flex flex-col flex-nowrap md:flex-row w-full" alignItems="center" gap="1.6rem">
             <AmountInput
               label="Unlocked YFI"
               amount={humanize('amount', unlockedAmount, votingEscrow?.decimals)}
               mt="1.6rem"
-              width={1 / 2}
+              className="w-full md:w-1/2"
               disabled
             />
             <Button
@@ -52,7 +52,7 @@ export const ClaimUnlockedTab = () => {
               success={withdrawUnlockedStatus.executed && !withdrawUnlockedStatus.error}
               disabled={hasLockedAmount || withdrawUnlockedStatus.loading}
               filled
-              width={1 / 2}
+              className="w-full md:w-1/2"
               height="5.6rem"
               mt="4.4rem"
             >
